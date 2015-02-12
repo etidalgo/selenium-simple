@@ -110,6 +110,7 @@ namespace SeleniumTests
             driver.FindElement(By.Id("Txt_EMail")).SendKeys("empty@null.dev.nz");
             driver.FindElement(By.Id("Txt_Pwd")).Clear();
             driver.FindElement(By.Id("Txt_Pwd")).SendKeys("pass123");
+            driver.FindElement(By.Id("Chk_ShowFNC_OPTIN")).Click();
             driver.FindElement(By.Id("Txt_CustRate")).Clear();
             driver.FindElement(By.Id("Txt_CustRate")).SendKeys("0.11");
             driver.FindElement(By.Id("Txt_CustRate_BL")).Clear();
@@ -128,6 +129,11 @@ namespace SeleniumTests
             driver.FindElement(By.Id("Txt_Sendback_Mail")).Clear();
             driver.FindElement(By.Id("Txt_Sendback_Mail")).SendKeys("No sendback");
             driver.FindElement(By.Id("Cmd_Save")).Click();
+
+            driver.Manage().Window.Maximize();
+            Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot(); // gets only visible area
+            ss.SaveAsFile(@"C:\screenshots\OSAudit-SavedData.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+
             driver.FindElement(By.LinkText("Qik Home Page")).Click();
 
             SwitchFrame("iframe1");
@@ -136,6 +142,11 @@ namespace SeleniumTests
             driver.FindElement(By.Id("OriginatorID")).Clear();
             driver.FindElement(By.Id("OriginatorID")).SendKeys("755557");
             driver.FindElement(By.Name("Btn_Go")).Click();
+
+            driver.Manage().Window.Maximize();
+            ss = ((ITakesScreenshot)driver).GetScreenshot();
+            ss.SaveAsFile(@"C:\screenshots\OSAudit-Audit.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+
         }
         private bool IsElementPresent(By by)
         {
