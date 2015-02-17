@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SeleniumTests;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Chrome;
 
 namespace Selenium_20150211
 {
@@ -11,7 +15,7 @@ namespace Selenium_20150211
     {
         static void Main(string[] args)
         {
-            OperationsSystemAudit osaudit = new OperationsSystemAudit();
+            OperationsSystemAudit<InternetExplorerDriver> osaudit = new OperationsSystemAudit<InternetExplorerDriver>();
             osaudit.SetupTest();
             osaudit.TheOperationsSystemAuditTest();
             osaudit.TeardownTest();

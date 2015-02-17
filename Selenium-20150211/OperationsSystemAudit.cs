@@ -11,8 +11,10 @@ using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumTests
 {
-    [TestFixture]
-    public class OperationsSystemAudit
+    [TestFixture(typeof(FirefoxDriver))]
+    [TestFixture(typeof(InternetExplorerDriver))]
+    [TestFixture(typeof(ChromeDriver))]
+    public class OperationsSystemAudit<TWebDriver> where TWebDriver : IWebDriver, new()
     {
         private IWebDriver driver;
         private StringBuilder verificationErrors;
@@ -23,8 +25,9 @@ namespace SeleniumTests
         public void SetupTest()
         {
             // driver = new FirefoxDriver();
-            driver = new InternetExplorerDriver();
+            // driver = new InternetExplorerDriver();
             // driver = new ChromeDriver();
+            driver = new TWebDriver();
             baseURL = "http://hajwdsbsqik1.sbs.local/";
             verificationErrors = new StringBuilder();
         }
