@@ -135,7 +135,8 @@ namespace SeleniumTests
 
             driver.Manage().Window.Maximize();
             Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot(); // gets only visible area
-            ss.SaveAsFile(@"C:\screenshots\OSAudit-SavedData.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            String shotname = String.Format(@"C:\screenshots\OSAudit-{0}-01-SavedData.jpg", driver.ToString());
+            ss.SaveAsFile(shotname, System.Drawing.Imaging.ImageFormat.Jpeg);
 
             driver.FindElement(By.LinkText("Qik Home Page")).Click();
 
@@ -148,7 +149,8 @@ namespace SeleniumTests
 
             driver.Manage().Window.Maximize();
             ss = ((ITakesScreenshot)driver).GetScreenshot();
-            ss.SaveAsFile(@"C:\screenshots\OSAudit-Audit.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            shotname = String.Format(@"C:\screenshots\OSAudit-{0}-02-Audit.jpg", driver.ToString());
+            ss.SaveAsFile(shotname, System.Drawing.Imaging.ImageFormat.Jpeg);
 
         }
         private bool IsElementPresent(By by)
