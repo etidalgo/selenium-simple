@@ -24,9 +24,6 @@ namespace SeleniumTests
         [SetUp]
         public void SetupTest()
         {
-            // driver = new FirefoxDriver();
-            // driver = new InternetExplorerDriver();
-            // driver = new ChromeDriver();
             driver = new TWebDriver();
             baseURL = "http://hajwdsbsqik1.sbs.local/";
             verificationErrors = new StringBuilder();
