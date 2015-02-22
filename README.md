@@ -10,5 +10,7 @@ Uses Chrome, IE and Firefox.
 
 Requirements
 ============
-Requires NUnit and Selenium
+NUnit package
+Selenium package
 Requires Selenium browser drivers for Chrome and IE placed into bin directories. 
+
