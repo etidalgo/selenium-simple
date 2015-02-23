@@ -5,7 +5,7 @@ Experiments with Selenium web driver
 
 Automate testing related to Operations System Audit. 
 Opens and edits a dealer entry.
-Opens and view audit report.
+Opens and views audit report.
 Uses Chrome, IE and Firefox. 
 
 Requirements
