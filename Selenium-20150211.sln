@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTests", "NunitClass\SeleniumTests.csproj", "{3225EDB3-6892-48CE-A8FA-716ACD630724}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginatorDataAccess", "OriginatorDataAccess\OriginatorDataAccess.csproj", "{80A707BA-0F68-431E-A505-E0D8119EAFBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3225EDB3-6892-48CE-A8FA-716ACD630724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3225EDB3-6892-48CE-A8FA-716ACD630724}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3225EDB3-6892-48CE-A8FA-716ACD630724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A707BA-0F68-431E-A505-E0D8119EAFBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A707BA-0F68-431E-A505-E0D8119EAFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A707BA-0F68-431E-A505-E0D8119EAFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A707BA-0F68-431E-A505-E0D8119EAFBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,8 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
+using Originator.DataAccess;
+
 namespace SeleniumTests
 {
     [TestFixture(typeof(FirefoxDriver))]
@@ -149,6 +151,13 @@ namespace SeleniumTests
             shotname = String.Format(@"C:\screenshots\OSAudit-{0}-02-Audit.jpg", driver.ToString());
             ss.SaveAsFile(shotname, System.Drawing.Imaging.ImageFormat.Jpeg);
 
+        }
+
+        [Test]
+        public void VerifyDealerExists()
+        {
+            DealerMaster dealerMaster = new DealerMaster();
+            var dealer = dealerMaster.DLRMASTs.Find( "754457" );
         }
         private bool IsElementPresent(By by)
         {
