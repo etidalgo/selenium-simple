@@ -27,7 +27,8 @@ namespace SeleniumTests
         public void SetupTest()
         {
             driver = new TWebDriver();
-            baseURL = "http://hajwdsbsqik1.sbs.local/";
+            // baseURL = "http://hajwdsbsqik1.sbs.local/";
+            baseURL = "http://sbsqikdev.sbs312002.sbs.local/";
             verificationErrors = new StringBuilder();
         }
         
